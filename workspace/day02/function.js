@@ -3,7 +3,7 @@ var result = add(1, 3);
 console.log(result);
 result = add(1, 3, 4);
 console.log(result);
-// 가변인자 -> 마침표 3개가 있다면 매개변수를 무한히 받을 수 있다.
+/* 가변 인자 */
 function add() {
     var numbers = [];
     for (var _i = 0; _i < arguments.length; _i++) {
@@ -18,8 +18,8 @@ function add() {
 // function add(number1, number2, number3) {
 //     return number1 + number2 + number3;
 // }
-/* 같은 이름으로 선언하게 되면 가장 최근에 선언한 함수가 적용된다. */
-// function add(number1, number2) {
+// /* 같은 이름으로 선언하게 되면 가장 최근에 선언된 함수가 적용된다. */
+// function add(number1, number2){
 //     return number1 + number2;
 // }
 // typescript를 사용하고 싶을 때에는 다운로드 후 사용해야 한다.
@@ -29,7 +29,6 @@ function add() {
 // npx tsc
 // Set-ExecutionPolicy Unrestricted (관리자 권한으로 실행)
 // tsc --init
-
 intro("한동석", 20, "남자", "강사");
 function intro(name) {
     var args = [];
