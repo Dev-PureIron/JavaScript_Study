@@ -37,6 +37,8 @@ console.log(datas.indexOf(1));
 // map(callback): 기존 값을 원하는 값으로 변경하여 리턴
 datas.map(function(data){return data / 2;}).forEach(data => console.log(data));
 
+datas.map(function(datas){return data /2;}).forEach(data => console.log(data));
+
 // split("구분점")
 "월화수목금토일".split("").forEach(data => console.log(data));
 
@@ -49,6 +51,7 @@ dayOfWeek = new Array(7);
     dayOfWeek[i] = data;
     // dayOfWeek.push(data);
 });
+
 console.log(dayOfWeek);
 
 // dayOfWeek.push("월");

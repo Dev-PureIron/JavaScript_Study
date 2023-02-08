@@ -3,6 +3,7 @@ var result = add(1, 3);
 console.log(result);
 result = add(1, 3, 4);
 console.log(result);
+
 /* 가변 인자 */
 function add() {
     var numbers = [];
