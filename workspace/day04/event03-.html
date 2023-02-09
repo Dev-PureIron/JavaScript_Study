@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>첨부파일 썸네일</title>
+    <style>
+      label[for='attach'] div {
+        width: 150px;
+        height: 150px;
+        background-image: url('https://cdn-icons-png.flaticon.com/512/272/272446.png');
+        background-size: 100%;
+        cursor: pointer;
+        position: relative;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <label for="attach">
+      <div>
+          <button class="x" style="position: absolute; right: 0px;">X</button>
+      </div>
+    </label>
+    <input type="file" id="attach" style="display: none" />
+  </body>
+  <script>
+    const file = document.querySelector('input[type=file]');
+    const imgDiv = document.querySelector('label[for=attach] div');
+    const x = document.querySelector('.x');
+
+    // x 버튼을 누르면, 기본 이미지로 변경!
+
+
+    file.addEventListener('change', function (e) {
+      let reader = new FileReader();
+      reader.readAsDataURL(e.target.files[0]);
+      reader.onload = function (e) {
+        let result = e.target.result;
+        if(result.includes("image")){
+            imgDiv.style.backgroundImage = `url('${result}')`; 
+            
+        }else{
+            imgDiv.style.backgroundImage = `url('no_image.png')`; 
+            
+        }
+      };
+    
+
+      x.addEventListener("click", function(){
+        imgDiv.style.backgroundImage = `url('https://cdn-icons-png.flaticon.com/512/272/272446.png')`;
+      })
+    });
+  </script>
+</html>
