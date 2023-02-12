@@ -22,15 +22,32 @@ function add(number1, number2, callback) {
 // 1. 상품명과 가격, 개수는 A함수에서 전달받는다.
 // 2. B함수에서는 상품명과 전체 금액을 전달받아서 출력한다.
 // 3. A함수는 B함수를 callback함수로 전달받는다.
-function pay(name, price, count, callback){
-    if(callback) {
-        var total = price * count;
-        callback(name, total);
-        return;
+// function pay(name, price, count, callback){
+//     if(callback) {
+//         var total = price * count;
+//         callback(name, total);
+//         return;
+//     }
+//     return total;
+// }
+
+// pay("고구마", 1500, 30, function(name, total){
+//     console.log(`${name}: ${total}원`);
+// })
+
+
+
+
+
+function market(name, price, quantity, callback) {
+    if(callback){
+        return callback(name, price * quantity);
     }
-    return total;
+    return name, price, number;
 }
 
-pay("고구마", 1500, 30, function(name, total){
-    console.log(`${name}: ${total}원`);
-})
+function print(name, result){
+    console.log(name + "의 총액은 " + result + "원 입니다.")
+}
+
+market("배", 5000, 5, print);

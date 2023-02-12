@@ -14,19 +14,31 @@
     <a href="javascript:createDIV()">DIV 생성</a>
 </body>
 <script>
+    // globalThis.count = 0;
+
+    // function createDIV() {
+    //     count ++;
+    //     let colors = ['yellow', 'green', 'red', 'pink', 'orange'];
+    //     let i = Math.floor(Math.random() * colors.length);
+    //     const newDiv = document.createElement("div");
+    //     newDiv.innerHTML = `새로 생성된 ${count}번 div입니다.`;
+    //     newDiv.style.backgroundColor = colors[i];
+    //     document.body.appendChild(newDiv);
+
+    //     newDiv.addEventListener("click", e => {newDiv.parentElement.removeChild(newDiv)});
+    //     // newDiv.onclick = e => {newDiv.parentElement.removeChild(newDiv)};
+    // }
+    
     globalThis.count = 0;
-
-    function createDIV() {
-        count ++;
-        let colors = ['yellow', 'green', 'red', 'pink', 'orange'];
-        let i = Math.floor(Math.random() * colors.length);
-        const newDiv = document.createElement("div");
-        newDiv.innerHTML = `새로 생성된 ${count}번 div입니다.`;
-        newDiv.style.backgroundColor = colors[i];
-        document.body.appendChild(newDiv);
-
-        newDiv.addEventListener("click", e => {newDiv.parentElement.removeChild(newDiv)});
-        // newDiv.onclick = e => {newDiv.parentElement.removeChild(newDiv)};
-    }
+        function createDIV () {
+            count ++;;
+            let colors = ['yellow', 'green', 'red', 'pink', 'orange']
+            let i = Math.floor(Math,random() * colors.length);
+            const newDiv = document.createElement("div");
+            newDiv.innerHTML = `새로 생성된 ${count}번 div입니다.`;
+            newDiv.style.backgroundColor = colors[i];
+            document.body.appendChild(newDiv);
+            
+        }
 </script>
 </html>

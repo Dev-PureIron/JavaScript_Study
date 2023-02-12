@@ -1,34 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
-/* Noto Sans Korean Bold 700 */
+@charset "utf-8";
 
-body,button,input {
-    font-family: 'Noto Sans KR', sans-serif;
+body {
+    font-family: 'NanumGomSinCe';
+    font-weight: bold;
 }
 
-.div1 {
-    text-align: center;
-    width: 100%;
+input {
+    font-family: 'NanumGomSinCe';
+    font-weight: bold;
 }
 
-.div-table {
+table {
+    width: 20%;
     margin: 0 auto;
-    width: 500px;
-    border: 1px solid black
-}
-.div-table tr:nth-child(1) {
-    background-color: #FFF9C4;
+    text-align: center;
 }
 
-tr, td {
-    border: 1px solid;
-}
-
-td {
-    width: 250px;
+thead {
+    background-color: #fff9c4;
 }
 
 fieldset {
-    width: 475px;
+    text-align: center;
     margin: 0 auto;
+    width: 20%;
 }
-
