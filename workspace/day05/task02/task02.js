@@ -1,3 +1,5 @@
+
+
 // html의 최상의 객체 document의 change 태그를 가져온다.
 // addEventListenerd 함수에 매개변수("click", callback 함수를 넘겨준다.
 // callback 함수는 getresult함수의 callback을 실행한다.
@@ -49,7 +51,7 @@ function changeToHangle(number) {
 
             // 만약 temp가 undefined라면 
             if(!temp) {
-                check = true;
+                check = true;``
                 // result에 점을 더해준다.
                 result += "점";
                 // 탈출해 밑으로 내려가지 못하게 한다. 다시 for문을 반복
